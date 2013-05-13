@@ -6,3 +6,8 @@
 	* https://help.ubuntu.com/community/LiveCDCustomization
 * Opis tworzenia LiveCD bez istniejącego obrazu
 	* https://help.ubuntu.com/community/LiveCDCustomizationFromScratch
+
+#### Uwagi
+* Doinstalować należy:
+	* mysql-server (błąd przetwarzania)
+	* phpmyadmin (błąd przetwarzania)
