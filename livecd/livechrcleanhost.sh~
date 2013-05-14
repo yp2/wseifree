@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# odmotowanie dev
+sudo umount edit/dev
