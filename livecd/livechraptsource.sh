@@ -14,6 +14,9 @@ cp /root/etc/apt/sources.list /etc/apt/sources.list
 apt-get update
 
 # dociagniece brakujacych kluczy
-echo 'Prosze czekac...' && sudo apt-get update 2> klucze > /dev/null && sed -i '/NO_PUBKEY/!d;s/.*NO_PUBKEY //' klucze && gpg --keyserver keyserver.ubuntu.com --recv-keys $(cat klucze) && gpg --export --armor $(cat klucze) | sudo apt-key add - && rm -f klucze
+echo 'Prosze czekac...';
+#get all missing public keys
+apt-get update 2> /tmp/keymissing; for key in $(grep "NO_PUBKEY" /tmp/keymissing |sed "s/.*NO_PUBKEY //"); do echo -e "\nProcessing key: $key"; gpg --keyserver pool.sks-keyservers.net --recv $key && gpg --export --armor $key |sudo apt-key add -; done
+
 
 
