@@ -15,6 +15,9 @@ mount --bind /dev/ edit/dev
 # kopiowanie skryptow dla remix'a do edit/root
 echo "Kopiowanie skryptow ..."
 cp livechrremix.sh edit/root/
+cp livechraptinstall.sh edit/root/
+cp livechraptsource.sh edit/root/
+cp livechrclean.sh edit/root/
 
 # kopiowanie listy paczek dla remixa z katalogu o jeden poziom niższego
 echo "Kopiowanie listy paczek ..."

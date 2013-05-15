@@ -27,4 +27,4 @@ umount /dev/pts
 # usuwanie zbędnych plików
 echo "Usuwanie zbednych plikow"
 rm -rf /tmp/* ~/.bash_history
-exit
+

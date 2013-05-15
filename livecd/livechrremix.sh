@@ -7,7 +7,7 @@ export LC_ALL=C
 # montowanie /proc /sys /dev/pts 
 echo "Montowanie /proc /sys /dev/pts ..."
 mount -t proc none /proc
-mount -t sysfs none /sysfs
+mount -t sysfs none /sys
 mount -t devpts none /dev/pts
 
 # ustawienie apt'a
