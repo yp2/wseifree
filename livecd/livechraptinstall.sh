@@ -7,4 +7,5 @@ export LC_ALL=C
 echo "instalacja pakitow ..."
 sudo apt-get update
 #sudo apt-get upgrade
-cat /root/inst_deb_wseix.txt | xargs apt-get install --no-install-recommends -y
+sudo dpkg --set-selections < /root/inst_deb_wseix.txt
+sudo apt-get --no-install-recommends -y dselect-upgrade 
